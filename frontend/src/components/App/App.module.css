@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    font: 400 19px 'Unbounded';
+    list-style: none;
+}
+
+input{
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #3e3e3e;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 3px 10px 3px 10px;
+    box-shadow: 1px 1px 3px 3px #e1e1e1;
+}
+
+.app_container{
+    width: 100%;
+    min-height: 700px ;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.app_container_heading {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.app_right_side_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 100px;
+    justify-content: space-between;
+}
+
+.app_main_part{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}

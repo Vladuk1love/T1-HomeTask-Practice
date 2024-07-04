@@ -1,7 +1,11 @@
 import express from 'express'
+import axios from "axios";
+import cors from 'cors'
 
 const app = express()
 app.use(express.json())
+app.use(cors())
+
 
 function encode(email, code) {
   let buffer = Buffer.from(`${email}:${code}`, 'utf8')
@@ -9,13 +13,19 @@ function encode(email, code) {
 }
 
 
-app.post('/set-status', (req, res) => {
+app.post('/set-status', async (req, res) => {
   try {
     const encodedString = encode(req.body.email, req.body.code)
-
-    res.json({
-      "encoded_string": encodedString
+    const data = {
+      "token": encodedString,
+      "status": "increased"
+    }
+    await axios.post('http://193.19.100.32:7000/api/set-status', data).then((result) => {
+      res.json({message:result.data})
+    }).catch(e => {
+      console.log(e)
     })
+
   } catch (error){
     console.log(error)
   }

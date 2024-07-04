@@ -1,0 +1,23 @@
+.get_code_container{
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+
+.get_code_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.get_code_message{
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+    width: 200px;
+    text-align: center;
+    float: left;
+}
